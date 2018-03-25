@@ -7,70 +7,72 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="src/css/style.css" type="text/css">
+      <link rel="stylesheet" href="src/css/animate.css">
     
 </head>
-<body style="background-image: url(src/Images/bg.jpg)">
+<body>
 <div class="container">
+   <center><div class="title wow bounceIn"><h1 class="display-2 text-white">Drum Simulator</h1></div></center>
     <div class="row inner-container bg-dark">
         <div class="col bg-dark text-warning text-center">
-            <div class="beat-box my-4" id="A">
+            <div data-key="65" class="beat-box my-4" id="A">
                 <span class="display-4">A</span>
              <p>Clap</p>
             </div>
             
         </div>
-        
+            
         <div class="col bg-secondary text-warning text-center">
-            <div class="beat-box my-4" id="S">
+            <div data-key="83" class="beat-box my-4" id="S">
                 <span class="display-4">S</span>
              <p>Hihat</p>
             </div>
         </div>
         
         <div class="col bg-dark text-warning text-center">
-            <div class="beat-box my-4" id="D">
+            <div data-key="68" class="beat-box my-4" id="D">
                 <span class="display-4">D</span>
              <p>Kick</p>
             </div>
         </div>
         
         <div class="col bg-secondary text-warning text-center">
-            <div class="beat-box my-4" id="F">
+            <div data-key="70" class="beat-box my-4" id="F">
                 <span class="display-4">F</span>
              <p>Open hat</p>
             </div>
         </div>
         
         <div class="col bg-dark text-warning text-center">
-            <div class="beat-box my-4" id="G">
+            <div data-key="71" class="beat-box my-4" id="G">
                 <span class="display-4">G</span>
              <p>Boom</p>
             </div>
         </div>
         
         <div class="col bg-secondary text-warning text-center">
-            <div class="beat-box my-4" id="H">
+            <div data-key="72" class="beat-box my-4" id="H">
                 <span class="display-4">H</span>
              <p>Ride</p>
             </div>
         </div>
         
         <div class="col bg-dark text-warning text-center">
-            <div class="beat-box my-4" id="J">
+            <div data-key="74" class="beat-box my-4" id="J">
                 <span class="display-4">J</span>
              <p>Snare</p>
             </div>
         </div>
         
         <div class="col bg-secondary text-warning text-center">
-            <div class="beat-box my-4" id="K">
+            <div data-key="75" class="beat-box my-4" id="K">
                 <span class="display-4">K</span>
              <p>Tom</p>
             </div>
         </div>
         
         <div class="col bg-dark text-warning text-center">
-            <div class="beat-box my-4" id="L">
+            <div data-key="76" class="beat-box my-4" id="L">
                 <span class="display-4">L</span>
              <p>Tink</p>
             </div>
@@ -80,9 +82,21 @@
     </div>
 </div>
     
-<audio data-key="65" src="/src/sounds/clap.wav"></audio>    
-        
+<audio data-key="65" src="/src/sounds/clap.wav"></audio>
+<audio data-key="83" src="/src/sounds/hihat.wav"></audio>           
+<audio data-key="68" src="/src/sounds/kick.wav"></audio> 
+<audio data-key="70" src="/src/sounds/openhat.wav"></audio>
+<audio data-key="71" src="/src/sounds/boom.wav"></audio>            
+<audio data-key="72" src="/src/sounds/ride.wav"></audio>           
+<audio data-key="74" src="/src/sounds/snare.wav"></audio>   
+<audio data-key="75" src="/src/sounds/tom.wav"></audio>  
+<audio data-key="76" src="/src/sounds/tink.wav"></audio>                       
+              
 <!--##################################SCRIPTS########################################### -->
 <script src="src/js/script.js"></script>
+<script src="src/js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
 </body>
 </html>
